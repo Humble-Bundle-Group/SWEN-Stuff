@@ -1,3 +1,5 @@
+package Core;
+
 public class Mechanic {
     private String name;
     private String id;

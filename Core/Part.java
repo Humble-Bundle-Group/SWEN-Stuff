@@ -1,3 +1,5 @@
+package Core;
+
 public class Part {
     private String partnNumber;
     private String name;

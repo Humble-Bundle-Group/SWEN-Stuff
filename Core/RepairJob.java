@@ -1,3 +1,5 @@
+package Core;
+
 public class RepairJob {
     private String id;
     private Vehicle automobile;

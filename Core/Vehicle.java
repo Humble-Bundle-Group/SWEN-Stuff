@@ -1,3 +1,5 @@
+package Core;
+
 public class Vehicle {
     private String vin;
     private String manufacturer;

@@ -1,3 +1,5 @@
+package Core;
+
 public class PartManager {
     private String id;
     private String name;
