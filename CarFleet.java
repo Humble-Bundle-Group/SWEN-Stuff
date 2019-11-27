@@ -63,17 +63,4 @@ public class CarFleet{
   public ArrayList<Vehicle> getList(){
     return this.list;
   }
-
-  /*public static void main(String[] args){
-    CarFleet fleet = new CarFleet();
-    Vehicle vehicle = new Vehicle("620123660","Toyota","Corola",2020,0);
-    Vehicle vehicle2 = new Vehicle("620123661","Mitsubishi","Misubishi",2020,2);
-    Vehicle vehicle3 = new Vehicle("620123662","Honda","Civic",2020,3);
-
-    fleet.addVehicle(vehicle);
-    fleet.addVehicle(vehicle2);
-    fleet.addVehicle(vehicle3);
-
-    fleet.printList();
-  }*/
 }
