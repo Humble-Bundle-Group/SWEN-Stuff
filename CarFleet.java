@@ -7,10 +7,6 @@ public class CarFleet{
     this.list = new ArrayList<Vehicle>();
   }
 
-  public void addVehicle(Vehicle vehicle){
-    list.add(vehicle);
-  }
-
   public int checkList(String id){
     int i;
 
@@ -21,6 +17,17 @@ public class CarFleet{
     }
 
     return -1;
+  }
+
+  public void addVehicle(Vehicle vehicle){
+    int i = checkList(vehicle.getVin());
+
+    if(i < 0){
+      list.add(vehicle);
+    }
+    else{
+      System.out.println("ID Number already exists.");
+    }
   }
 
   public void removeVehicle(String id){
