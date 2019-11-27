@@ -104,24 +104,30 @@ public class StockLibrary
     public Part searchPart(Part p)
     {
         Part temp = new Part("");
-        boolean exists = false;
-        for (Part part : this.partsList)
+        Collections.sort(this.partsList);
+        int result = Collections.binarySearch(this.partsList, p);
+        if(result>0)
         {
-            if(part.compareTo(p) == 0)
-            {
-                temp = part;
-                exists = true;
-                break;
-            }
-        }
-        if(!exists)
-        {
-            System.out.println("Part not found.");
-            return new Part("null");
+            return this.partsList.get(result);
         }
         else
         {
+            System.out.println("Part not found.");
             return temp;
+        }
+    }
+
+    public void deletePart(Part p)
+    {
+        Collections.sort(this.partsList);
+        int result = Collections.binarySearch(this.partsList, p);
+        if(result>0)
+        {
+            this.partsList.remove(this.partsList.get(result));
+        }
+        else
+        {
+            System.out.println("Part not found.");
         }
     }
 }
