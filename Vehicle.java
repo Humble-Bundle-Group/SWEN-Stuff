@@ -24,6 +24,11 @@ public class Vehicle {
     public String getModel() {
         return model;
     }
+	
+	public int getStat()
+	{
+		return this.status.getStat();
+	}
 
     public String getVin() {
         return vin;
