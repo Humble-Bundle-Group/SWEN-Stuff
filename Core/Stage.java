@@ -1,5 +1,3 @@
-package Core;
-
 public class Stage {
     public  String standing;
 
@@ -16,5 +14,9 @@ public class Stage {
         if (stat == 3) {
             standing = "FAILED";
         }
+    }
+
+    public String getStanding(){
+      return standing;
     }
 }

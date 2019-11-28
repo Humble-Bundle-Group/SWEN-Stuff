@@ -1,5 +1,3 @@
-package Core;
-
 public class RepairJob {
     private String id;
     private Vehicle automobile;
@@ -27,6 +25,10 @@ public class RepairJob {
 
     public String getDescription() {
         return description;
+    }
+
+    public void setId(String id){
+      this.id = id;
     }
 
     public void changeStatus(int state) {
