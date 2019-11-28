@@ -30,7 +30,7 @@ public class Login{
     login[1] = str;
     login[2] = str2;
 
-    if(checkLogin(str,str2) == 1){
+    if(checkLogin(str,str2) > 0){
       mechLogins.add(login);
     }
     else{
@@ -41,18 +41,22 @@ public class Login{
   public int checkLogin(String str, String str2){
     int i;
     int flag = 1;
-
-    for(i=0;i < mechLogins.size(); i++){
-      if(mechLogins.get(i)[1] == str){
-        flag = 0;
-      }
+    
+    if(str == this.username && str2 == this.password){
+      flag = 0;
     }
 
     for(i=0;i < mechLogins.size(); i++){
+      if((mechLogins.get(i)[1] == str) && (mechLogins.get(i)[2] == str)){
+        flag = -1;
+      }
+    }
+
+    /*for(i=0;i < mechLogins.size(); i++){
       if(mechLogins.get(i)[2] == str){
-        flag = 0;
+        flag = -1;
       }
-    }
+    }*/
 
     return flag;
   }
