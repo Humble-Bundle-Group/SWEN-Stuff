@@ -1,5 +1,3 @@
-package Core;
-
 public class Vehicle {
     private String vin;
     private String manufacturer;
@@ -26,6 +24,11 @@ public class Vehicle {
     public String getModel() {
         return model;
     }
+	
+	public int getStat()
+	{
+		return this.status.getStat();
+	}
 
     public String getVin() {
         return vin;
@@ -38,4 +41,19 @@ public class Vehicle {
     public void changeStatus(int newStatus) {
         this.status = new Status(newStatus);
     }
-}
+
+    public String toString(){
+      return "ID Number: " + getVin() + "\nManufacturer: " + getManufacturer() + "\nModel: " + getModel() + "\nYear: " + getYear() + "\nStatus: " + getStat();
+    }
+	
+	public String fileString()
+	{
+		String s = this.toString();
+		String[] s1 = s.split("\n");
+		String result = "";
+		for(String info : s1)
+		{
+			result += info + " ";
+		}
+		return result;
+	}

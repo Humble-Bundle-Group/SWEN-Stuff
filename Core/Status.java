@@ -1,7 +1,6 @@
-package Core;
-
 public class Status {
     private String condition;
+	private int stat;
 
     public Status(int stat) {
         if (stat == 0) {
@@ -16,5 +15,15 @@ public class Status {
         if (stat == 3) {
             condition = "IN REPAIR";
         }
+		this.stat = stat;
     }
+
+    public String getCondition(){
+      return this.condition;
+    }
+	
+	public int getStat()
+	{
+		return this.stat;
+	}
 }
