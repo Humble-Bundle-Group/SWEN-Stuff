@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Login{
   private String username;
   private String password;
-  private int flag;
+  private int flag = 0;
   private ArrayList<String[]> mechLogins;
 
   public Login(){
@@ -16,6 +16,7 @@ public class Login{
   public void setAdmin(String str, String str2){
     this.username = str;
     this.password = str2;
+    this.flag = 1;
   }
 
   public int getFlag(){
